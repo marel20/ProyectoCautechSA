@@ -58,12 +58,18 @@
     .indexText{
         flex-direction: column;
     }
+
     .indexText > div > img{
         max-width: 60%;
         margin: 5% auto;
     }
+
     .imgBackground{
         background-size: contain 50 80 !important;
         height: 30vh !important;
+    }
+
+    .title{
+        font-size: 54px;
     }
 }
