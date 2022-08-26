@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html > body{
+    background-color: #76e29e;
+}
+
+/*----- Start Navbar Style -----*/
+.menu{
+    background-color: #000000;
+    height: 4.375rem;
+}
+
+.menu_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 75rem;
+    height: 100%;
+}
+
+.menu_links{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+    background-color: #000000;
+    margin-top: 1%;
+    z-index: 1500;
+}
+
+.menu_item{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu_item--active{
+    --transform: rotate(0);
+    --background: #45D97B;
+}
+
+.menu_item--show{
+    background-color: #000000;
+}
+
+.menu_item:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu_nesting{
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #000000;
+}
+
+.menu_link{
+    color: #45D97B;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 1.875rem;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background-color: #000000;
+}
+
+.menu_link:hover{
+    background-color: #45D97B;
+    color: #000000;
+}
+
+.menu_arrow{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: .1875rem;
+}
+
+.menu_link--inside{
+    padding: .9375rem 3.125rem .9375rem .625rem;
+}
+
+.menu_link--inside:hover{
+    background-color: #45D97B;
+}
+
+.menu_hamburguer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 .9375rem;
+    cursor: pointer;
+    display: none;
+}
+
+.menu_img{
+    display: block;
+    width: 2.25rem;
+}
+
+.btnWsp{
+    position: fixed;
+    bottom: 3.125rem;
+    right: 1.25rem;
+    z-index: 1500;
+}
+/*----- End Navbar Style -----*/
+
+.indexText{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----- Start Page Empresa Style ----- */
+.textEmpresa{
+    width: 60% !important;
+    margin: 3% auto !important;
+    text-align: justify;
+    font-weight: bold;
+}
+/*----- End Page Empresa Style ----- */
+
+/*----- Start Page Contacto Style ----- */
+.title{
+    text-align: center;
+    margin: 2% auto 3% auto;
+    color: #000000;
+  }
+  .adress > div{
+    margin-top: 5%;
+  }
+  .adress > div > p > a{
+    color: #000000b6;
+  }
+.iframe{
+    margin: 3% auto;
+}
+
+.get-in-touch {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+
+  .contact-form .form-field {
+    margin: 25px 0;
+  }
+  .contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-width: 0 0 2px 0;
+    border-color: #000000;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    background-color: #61d38b;
+
+  }
+  .contact-form .input-text:focus {
+    outline: none;
+  }
+  .contact-form .input-text:focus + .label,
+  .contact-form .input-text.not-empty + .label {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+  .contact-form .label {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #000000;
+    cursor: text;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, 
+    -webkit-transform .2s ease-in-out;
+  }
+  .contact-form .submit-btn {
+    display: inline-block;
+    background-color: #000000;
+    color: #45D97B;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+  }
+/*----- End Page Contacto Style ----- */
+
